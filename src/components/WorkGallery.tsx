@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { works } from "../data/siteData";
 import { Reveal } from "./Reveal";
 import { SectionHeader } from "./SectionHeader";
@@ -25,11 +24,8 @@ export function WorkGallery() {
             >
               <WorkMockup variant={work.variant} />
               <div className="p-3">
-                <div className="mb-3 flex items-start justify-between gap-4">
+                <div className="mb-3">
                   <h3 className="font-display text-xl font-semibold text-white">{work.title}</h3>
-                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[8px] border border-white/10 bg-white/[0.06] text-white/[0.72] transition group-hover:border-mint/[0.35] group-hover:text-mint">
-                    <ArrowUpRight className="h-4 w-4" />
-                  </span>
                 </div>
                 <p className="text-sm leading-6 text-white/[0.58]">{work.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">

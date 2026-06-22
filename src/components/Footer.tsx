@@ -20,7 +20,9 @@ export function Footer() {
             Telegram: @g0_faq
           </a>
           <span>VK: @g0_faq</span>
-          <span>Instagram: @g0_faq</span>
+          <a href={contacts.github} className="transition hover:text-mint" target="_blank" rel="noreferrer">
+            GitHub: g0faq
+          </a>
         </div>
       </div>
     </footer>

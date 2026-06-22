@@ -1,7 +1,7 @@
 export const contacts = {
   telegram: "https://t.me/g0_faq",
   vk: "#",
-  instagram: "#",
+  github: "https://github.com/g0faq",
   other: "#",
 };
 

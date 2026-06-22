@@ -25,8 +25,8 @@ export function CTA() {
                 <a href={contacts.vk} className="social-link">
                   VK
                 </a>
-                <a href={contacts.instagram} className="social-link">
-                  Instagram
+                <a href={contacts.github} className="social-link" target="_blank" rel="noreferrer">
+                  GitHub
                 </a>
                 <a href={contacts.other} className="social-link">
                   Other

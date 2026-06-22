@@ -1,9 +1,11 @@
-import { Check } from "lucide-react";
+import { Bot, Check, Database, PanelsTopLeft, Workflow } from "lucide-react";
 import { services } from "../data/siteData";
 import { Reveal } from "./Reveal";
 import { SectionHeader } from "./SectionHeader";
 
 export function Services() {
+  const serviceIcons = [PanelsTopLeft, Database, Bot, Workflow];
+
   return (
     <section id="services" className="section">
       <Reveal>
@@ -22,7 +24,12 @@ export function Services() {
                   <h3 className="font-display text-2xl font-semibold text-white">{service.title}</h3>
                   <p className="mt-2 inline-flex rounded-full bg-mint/[0.12] px-3 py-1 text-sm font-semibold text-mint">{service.price}</p>
                 </div>
-                <div className="h-11 w-11 rounded-[8px] border border-white/10 bg-white/[0.06] transition group-hover:border-mint/[0.35] group-hover:bg-mint/10" />
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-[8px] border border-mint/25 bg-mint/10 text-mint transition group-hover:border-mint/50 group-hover:bg-mint/15">
+                  {(() => {
+                    const Icon = serviceIcons[index];
+                    return <Icon className="h-5 w-5" strokeWidth={2} />;
+                  })()}
+                </div>
               </div>
               <p className="text-sm leading-6 text-white/[0.62]">{service.description}</p>
               <div className="mt-6 space-y-3">

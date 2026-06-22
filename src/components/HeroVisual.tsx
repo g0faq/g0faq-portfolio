@@ -81,11 +81,11 @@ export function HeroVisual() {
               opacity: { duration: 0.5, delay: 0.55 + index * 0.1 },
               y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: index * 0.25 },
             }}
-            className={`absolute ${card.className} rounded-[8px] border border-white/[0.12] bg-[#10131c]/[0.8]2 px-4 py-3 shadow-glow backdrop-blur-xl`}
+            className={`absolute ${card.className} rounded-[8px] border border-white/[0.12] bg-[#10131c]/90 px-4 py-3 shadow-glow backdrop-blur-xl`}
           >
             <div className="flex items-center gap-3">
-              <div className="grid h-9 w-9 place-items-center rounded-[8px] bg-white/[0.8]">
-                <Icon className="h-4 w-4 text-mint" />
+              <div className="grid h-9 w-9 place-items-center rounded-[8px] border border-mint/30 bg-mint/10">
+                <Icon className="h-4 w-4 text-mint" strokeWidth={2.2} />
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">{card.label}</p>

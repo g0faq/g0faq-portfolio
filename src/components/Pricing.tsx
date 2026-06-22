@@ -24,7 +24,7 @@ export function Pricing() {
         ))}
       </div>
       <Reveal>
-        <div className="mt-5 rounded-[8px] border border-mint/[0.18] bg-mint/[0.8] p-5 text-sm leading-6 text-white/[0.68] backdrop-blur-xl">
+        <div className="mt-5 rounded-[8px] border border-mint bg-mint p-5 text-sm font-medium leading-6 text-ink/85 shadow-glow">
           Точная цена зависит от задачи. Можно начать с простой демки и постепенно расширять проект.
         </div>
       </Reveal>
