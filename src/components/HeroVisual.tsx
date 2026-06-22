@@ -11,12 +11,12 @@ const floatingCards = [
 export function HeroVisual() {
   return (
     <div className="relative mx-auto min-h-[430px] w-full max-w-[560px]">
-      <div className="absolute inset-8 rounded-[8px] bg-mint/20 blur-3xl" />
+      <div className="hero-glow absolute inset-8 rounded-[8px] bg-mint/20 blur-3xl" />
       <motion.div
         initial={{ opacity: 0, scale: 0.94, y: 24 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute left-1/2 top-12 w-[86%] -translate-x-1/2 overflow-hidden rounded-[8px] border border-white/[0.12] bg-panel-gradient p-4 shadow-violet backdrop-blur-2xl"
+        className="hero-panel absolute left-1/2 top-12 w-[86%] -translate-x-1/2 overflow-hidden rounded-[8px] border border-white/[0.12] bg-panel-gradient p-4 shadow-violet backdrop-blur-2xl"
       >
         <div className="mb-4 flex items-center justify-between">
           <div className="flex gap-1.5">

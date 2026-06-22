@@ -2,7 +2,7 @@ import { contacts, navigation } from "../data/siteData";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.8] py-8">
+    <footer className="border-t border-white/[0.08] py-8">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div>
           <p className="font-display text-xl font-semibold text-white">g0_faq</p>

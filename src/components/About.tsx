@@ -41,9 +41,9 @@ export function About() {
                 </div>
                 <Zap className="h-5 w-5 text-mint" />
               </div>
-              <div className="mt-5 rounded-[8px] border border-mint/[0.18] bg-mint/[0.8] p-4">
+              <div className="mt-5 rounded-[8px] border border-mint/25 bg-mint/10 p-4">
                 <p className="font-display text-lg font-semibold text-white">design + code + business logic</p>
-                <p className="mt-2 text-sm leading-6 text-white/[0.58]">Собираю понятный путь от первого клика до заявки, учёта и следующего действия владельца.</p>
+                <p className="mt-2 text-sm leading-6 text-white/[0.68]">Собираю понятный путь от первого клика до заявки, учёта и следующего действия владельца.</p>
               </div>
               <div className="mt-5 grid grid-cols-2 gap-3">
                 <div className="rounded-[8px] border border-white/10 bg-white/[0.035] p-4">
