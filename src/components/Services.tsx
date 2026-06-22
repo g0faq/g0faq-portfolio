@@ -18,8 +18,8 @@ export function Services() {
       <div className="grid gap-4 lg:grid-cols-4">
         {services.map((service, index) => (
           <Reveal key={service.title} delay={index * 0.05}>
-            <article className="card group flex h-full min-h-[390px] flex-col p-5">
-              <div className="mb-5 flex items-start justify-between gap-4">
+            <article className="card group flex h-full min-h-[360px] flex-col p-5">
+              <div className="mb-4 flex items-start justify-between gap-4">
                 <div>
                   <h3 className="font-display text-2xl font-semibold text-white">{service.title}</h3>
                   <p className="mt-2 inline-flex rounded-full bg-mint/[0.12] px-3 py-1 text-sm font-semibold text-mint">{service.price}</p>
@@ -32,7 +32,7 @@ export function Services() {
                 </div>
               </div>
               <p className="text-sm leading-6 text-white/[0.62]">{service.description}</p>
-              <div className="mt-6 space-y-3">
+              <div className="mt-5 space-y-3">
                 {service.includes.map((item) => (
                   <div key={item} className="flex gap-3 text-sm text-white/70">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-mint" />
@@ -40,7 +40,7 @@ export function Services() {
                   </div>
                 ))}
               </div>
-              <a href="#contacts" className="btn btn-secondary mt-auto justify-center pt-3">Обсудить</a>
+              <a href="#contacts" className="service-link mt-auto">Обсудить проект →</a>
             </article>
           </Reveal>
         ))}

@@ -33,7 +33,7 @@
 
 @layer components {
   .section {
-    @apply relative mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16;
+    @apply relative mx-auto max-w-7xl scroll-mt-24 px-5 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-14;
   }
 
   .card {
@@ -41,15 +41,15 @@
   }
 
   .btn {
-    @apply inline-flex min-h-12 items-center gap-2 rounded-[8px] px-5 py-3 text-sm font-semibold transition duration-300 active:scale-[0.98];
+    @apply inline-flex min-h-11 items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition duration-300 active:scale-[0.98];
   }
 
   .btn-primary {
-    @apply relative overflow-hidden bg-premium-gradient text-ink shadow-glow hover:shadow-[0_18px_60px_rgba(121,242,192,0.22)];
+    @apply relative overflow-hidden border border-mint/45 bg-mint text-ink shadow-[0_12px_36px_rgba(121,242,192,0.16)] hover:bg-[#a9ffd9] hover:shadow-[0_16px_48px_rgba(121,242,192,0.2)];
   }
 
   .btn-secondary {
-    @apply border border-white/[0.12] bg-white/[0.06] text-white backdrop-blur-xl hover:border-mint/[0.35] hover:bg-mint/10;
+    @apply border border-white/[0.12] bg-white/[0.045] text-white/80 backdrop-blur-xl hover:border-mint/[0.35] hover:bg-mint/10 hover:text-white;
   }
 
   .social-link {
@@ -57,7 +57,7 @@
   }
 
   .mockup-shell {
-    @apply min-h-[220px] overflow-hidden rounded-[8px] border border-white/10 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)];
+    @apply min-h-[185px] overflow-hidden rounded-[8px] border border-white/10 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)];
   }
 
   .eyebrow {
@@ -104,11 +104,35 @@
   }
 
   .case-card {
-    @apply overflow-hidden rounded-[8px] border border-white/10 bg-panel-gradient shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_18px_70px_rgba(0,0,0,.25)] backdrop-blur-xl transition duration-300 hover:border-mint/30 hover:shadow-glow;
+    @apply overflow-hidden rounded-[8px] border border-white/10 bg-panel-gradient shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_18px_70px_rgba(0,0,0,.25)] backdrop-blur-xl transition duration-300 hover:border-mint/30 hover:bg-white/[0.07] hover:shadow-glow;
   }
 
   .case-card .mockup-shell {
-    @apply transition duration-500 group-hover:scale-[1.025];
+    @apply transition duration-500 group-hover:scale-[1.012];
+  }
+
+  .case-title {
+    display: -webkit-box;
+    min-height: 3.5rem;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .case-desc {
+    display: -webkit-box;
+    min-height: 4.5rem;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .case-open {
+    @apply inline-flex w-fit items-center gap-2 rounded-full border border-mint/25 bg-mint/10 px-3 py-2 text-xs font-semibold text-mint transition group-hover:border-mint/45 group-hover:bg-mint/15 group-hover:text-white;
+  }
+
+  .service-link {
+    @apply inline-flex min-h-10 items-center justify-center rounded-full border border-mint/25 bg-mint/[0.08] px-4 py-2 text-sm font-semibold text-mint transition hover:border-mint/45 hover:bg-mint/[0.14] hover:text-white;
   }
 
   .card-float {
@@ -120,15 +144,15 @@
   }
 
   .task-card {
-    @apply relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-[radial-gradient(circle_at_90%_5%,rgba(155,124,255,.14),transparent_35%),linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025))] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,.05)] transition duration-300 hover:-translate-y-1.5 hover:border-violet/30;
+    @apply relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-[radial-gradient(circle_at_90%_5%,rgba(155,124,255,.14),transparent_35%),linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025))] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,.05)] transition duration-300 hover:border-violet/30 hover:bg-white/[0.07];
   }
 
   .task-number {
-    @apply absolute right-5 top-3 font-display text-6xl font-semibold text-white/[0.055];
+    @apply absolute right-4 top-3 font-display text-5xl font-semibold text-white/[0.055];
   }
 
   .process-card {
-    @apply relative z-10 flex min-h-[230px] flex-col overflow-hidden rounded-lg border border-white/10 bg-[#0c0f15]/95 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,.06)] transition duration-300 hover:-translate-y-1.5 hover:border-mint/25;
+    @apply relative z-10 flex min-h-[210px] flex-col overflow-hidden rounded-lg border border-white/10 bg-[#0c0f15]/95 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,.06)] transition duration-300 hover:border-mint/25 hover:bg-white/[0.055];
   }
 
   .process-dot {
@@ -160,9 +184,17 @@
   }
 
   .horizontal-rail {
-    @apply -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-5 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8;
+    @apply -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 pt-0 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8;
     scrollbar-width: thin;
     scrollbar-color: rgba(121, 242, 192, 0.55) rgba(255, 255, 255, 0.08);
+  }
+
+  .rail-button {
+    @apply grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.055] text-white/75 transition hover:border-mint/35 hover:bg-white/[0.09] hover:text-white;
+  }
+
+  .rail-button-accent {
+    @apply border-mint/[0.35] bg-mint/[0.12] text-mint hover:bg-mint/[0.18];
   }
 
   .horizontal-rail::-webkit-scrollbar {
@@ -294,9 +326,9 @@
   inset: -100% auto -100% -35%;
   width: 25%;
   transform: rotate(18deg);
-  background: rgba(255,255,255,.42);
+  background: rgba(255,255,255,.34);
   filter: blur(7px);
-  animation: shimmer 5s ease-in-out infinite;
+  animation: shimmer 7s ease-in-out infinite;
 }
 
 @keyframes aurora-shift { to { filter: saturate(1.08); transform: scale(1.025); } }
@@ -311,11 +343,12 @@
 
 @media (max-width: 640px) {
   .mockup-shell {
-    min-height: 190px;
+    min-height: 160px;
   }
 
   .hero-panel { animation: none; }
-  .process-card { min-height: 240px; }
+  .process-card { min-height: 190px; }
+  .task-card { min-height: 180px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

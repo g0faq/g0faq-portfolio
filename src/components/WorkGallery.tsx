@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight, MousePointer2 } from "lucide-react";
 import { useCallback, useRef, useState } from "react";
 import { works } from "../data/siteData";
@@ -20,24 +19,24 @@ export function WorkGallery() {
 
   return (
     <section id="works" className="section section-orbit section-tint-violet">
-      <div className="mb-7 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+      <div className="mb-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <Reveal className="max-w-3xl">
           <SectionHeader
             eyebrow="Работы"
             title="Демо-кейсы, которые можно открыть и потыкать"
-            text="Не просто картинки. Каждый кейс открывается как интерактивный прототип: формы, табы, статусы, сценарии, карточки и заглушки будущей логики."
+            text="Каждый кейс открывается как интерактивный прототип: формы, табы, статусы, сценарии и будущая логика в заглушках."
           />
         </Reveal>
         <Reveal>
           <div className="flex items-center gap-2">
-            <span className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 text-sm text-white/60 sm:inline-flex">
+            <span className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-2 text-xs font-semibold text-white/60 sm:inline-flex">
               <MousePointer2 className="h-4 w-4 text-mint" />
               листается в бок
             </span>
-            <button className="icon-button" type="button" onClick={() => scrollRail("left")} aria-label="Прокрутить кейсы влево">
+            <button className="rail-button" type="button" onClick={() => scrollRail("left")} aria-label="Прокрутить кейсы влево">
               <ChevronLeft className="h-5 w-5" />
             </button>
-            <button className="icon-button" type="button" onClick={() => scrollRail("right")} aria-label="Прокрутить кейсы вправо">
+            <button className="rail-button rail-button-accent" type="button" onClick={() => scrollRail("right")} aria-label="Прокрутить кейсы вправо">
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
@@ -46,27 +45,25 @@ export function WorkGallery() {
 
       <div ref={railRef} className="horizontal-rail">
         {works.map((work) => (
-          <Reveal key={work.title} className="min-w-[86vw] snap-start sm:min-w-[430px] lg:min-w-[470px]">
-            <motion.button
+          <Reveal key={work.title} className="min-w-[78vw] snap-start sm:min-w-[380px] lg:min-w-[410px]">
+            <button
               type="button"
               onClick={() => setSelected(work)}
-              whileHover={{ y: -6 }}
-              transition={{ duration: 0.25 }}
               className="case-card group h-full w-full text-left"
             >
               <div className="relative overflow-hidden rounded-lg">
                 <WorkMockup variant={work.variant} />
                 <span className="status-badge absolute left-3 top-3">{work.status}</span>
               </div>
-              <div className="flex min-h-[230px] flex-col p-4 sm:p-5">
-                <h3 className="font-display text-2xl font-semibold text-white">{work.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-white/[0.68]">{work.description}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
+              <div className="flex min-h-[185px] flex-col p-4">
+                <h3 className="case-title font-display text-xl font-semibold text-white">{work.title}</h3>
+                <p className="case-desc mt-2 text-sm leading-6 text-white/[0.68]">{work.description}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
                   {work.tags.map((tag) => <span key={tag} className="tag">{tag}</span>)}
                 </div>
-                <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-mint">Открыть демо-прототип <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
+                <span className="case-open mt-auto">Открыть демо <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
               </div>
-            </motion.button>
+            </button>
           </Reveal>
         ))}
       </div>
