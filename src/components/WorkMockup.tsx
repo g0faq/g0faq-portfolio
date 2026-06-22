@@ -23,7 +23,7 @@ export function WorkMockup({ variant }: WorkMockupProps) {
     );
   }
 
-  if (variant === "crm" || variant === "finance") {
+  if (variant === "crm" || variant === "automation") {
     return (
       <div className="mockup-shell bg-gradient-to-br from-[#09130F] via-[#12131B] to-[#20163A]">
         <div className="grid h-full grid-cols-[0.35fr_1fr] gap-3">
@@ -75,7 +75,7 @@ export function WorkMockup({ variant }: WorkMockupProps) {
   }
 
   return (
-    <div className={`mockup-shell ${variant === "barber" ? "bg-gradient-to-br from-[#1C1512] to-[#10131C]" : "bg-gradient-to-br from-[#10131C] via-[#111827] to-[#191638]"}`}>
+    <div className={`mockup-shell ${variant === "beauty" ? "bg-gradient-to-br from-[#2b1624] via-[#171f2b] to-[#10131C]" : "bg-gradient-to-br from-[#10131C] via-[#111827] to-[#191638]"}`}>
       <div className="rounded-[8px] border border-white/[0.12] bg-black/[0.28] p-3">
         <div className="mb-3 flex items-center justify-between">
           <div className="flex gap-1">

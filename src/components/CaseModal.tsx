@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Check, X } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { contacts, works } from "../data/siteData";
-import { WorkMockup } from "./WorkMockup";
+import { CasePrototype } from "./CasePrototype";
 
 type CaseItem = (typeof works)[number];
 
@@ -64,7 +64,7 @@ export function CaseModal({ item, onClose }: CaseModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.97, y: 12 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="my-auto w-full max-w-5xl overflow-hidden rounded-xl border border-white/15 bg-[#0b0e14]/95 shadow-[0_40px_120px_rgba(0,0,0,0.65)] outline-none"
+            className="my-auto w-full max-w-7xl overflow-hidden rounded-xl border border-white/15 bg-[#0b0e14]/95 shadow-[0_40px_120px_rgba(0,0,0,0.65)] outline-none"
           >
             <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 sm:px-7">
               <span className="status-badge">{item.status}</span>
@@ -72,8 +72,8 @@ export function CaseModal({ item, onClose }: CaseModalProps) {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            <div className="grid gap-7 p-5 sm:p-7 lg:grid-cols-[0.92fr_1.08fr]">
-              <div>
+            <div className="grid gap-5 p-4 sm:p-6 lg:grid-cols-[0.42fr_1fr]">
+              <aside>
                 <h2 id="case-modal-title" className="font-display text-3xl font-semibold text-white sm:text-4xl">{item.title}</h2>
                 <p className="mt-5 text-base leading-7 text-white/70">{item.task}</p>
                 <div className="mt-7">
@@ -94,10 +94,8 @@ export function CaseModal({ item, onClose }: CaseModalProps) {
                 <a href={contacts.telegram} className="btn btn-primary mt-7 justify-center">
                   Написать по похожему проекту <ArrowRight className="h-4 w-4" />
                 </a>
-              </div>
-              <div className="self-start rounded-xl border border-violet/20 bg-violet/[0.06] p-3">
-                <WorkMockup variant={item.variant} />
-              </div>
+              </aside>
+              <CasePrototype item={item} />
             </div>
           </motion.div>
         </motion.div>

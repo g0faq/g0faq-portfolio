@@ -7,7 +7,7 @@ export function Services() {
   const serviceIcons = [PanelsTopLeft, Database, Bot, Workflow];
 
   return (
-    <section id="services" className="section">
+    <section id="services" className="section section-tint-violet">
       <Reveal>
         <SectionHeader
           eyebrow="Что делаю"
@@ -18,7 +18,7 @@ export function Services() {
       <div className="grid gap-4 lg:grid-cols-4">
         {services.map((service, index) => (
           <Reveal key={service.title} delay={index * 0.05}>
-            <article className="card group flex h-full min-h-[480px] flex-col p-5">
+            <article className="card group flex h-full min-h-[390px] flex-col p-5">
               <div className="mb-5 flex items-start justify-between gap-4">
                 <div>
                   <h3 className="font-display text-2xl font-semibold text-white">{service.title}</h3>

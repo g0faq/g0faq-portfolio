@@ -4,7 +4,7 @@ import { SectionHeader } from "./SectionHeader";
 
 export function Pricing() {
   return (
-    <section id="pricing" className="section">
+    <section id="pricing" className="section section-tint-green">
       <Reveal>
         <SectionHeader
           eyebrow="Прайс"
@@ -15,7 +15,7 @@ export function Pricing() {
       <div className="grid gap-4 lg:grid-cols-5">
         {pricing.map((item, index) => (
           <Reveal key={item.title} delay={index * 0.04}>
-            <article className="card flex h-full min-h-[260px] flex-col p-5">
+            <article className="card flex h-full min-h-[220px] flex-col p-5">
               <p className="font-display text-xl font-semibold text-white">{item.title}</p>
               <p className="mt-3 text-2xl font-semibold text-mint">{item.price}</p>
               <p className="mt-4 text-sm leading-6 text-white/[0.58]">{item.text}</p>

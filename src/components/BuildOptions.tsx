@@ -7,7 +7,7 @@ const icons = [PanelsTopLeft, Contact, LayoutDashboard, Bot, UserRound, FileInpu
 
 export function BuildOptions() {
   return (
-    <section id="solutions" className="section section-mesh">
+    <section id="solutions" className="section section-mesh section-tint-green">
       <Reveal><SectionHeader eyebrow="Решения" title="Что можно собрать под ваш бизнес" text="Можно начать с простой страницы, а потом расширить её до CRM, бота или автоматизации." /></Reveal>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {buildOptions.map(([title, text], index) => {

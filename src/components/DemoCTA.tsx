@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 export function DemoCTA() {
   return (
-    <section className="section">
+    <section className="section section-tint-violet">
       <Reveal>
         <div className="demo-card grid gap-8 p-6 sm:p-9 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:p-12">
           <div>
