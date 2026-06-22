@@ -7,13 +7,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background: #050608;
+    background: #080b0d;
   }
 
   body {
     margin: 0;
     min-width: 320px;
-    background: #050608;
+    background: #080b0d;
     color: #fff;
     font-family: "Manrope", system-ui, sans-serif;
     text-rendering: geometricPrecision;
@@ -37,7 +37,7 @@
   }
 
   .card {
-    @apply rounded-[8px] border border-white/10 bg-panel-gradient shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_70px_rgba(0,0,0,0.24)] backdrop-blur-xl transition duration-300 hover:-translate-y-1.5 hover:border-mint/25 hover:bg-white/[0.075] hover:shadow-glow;
+    @apply rounded-[8px] border border-white/10 bg-[#101416]/[0.85] shadow-[inset_0_1px_0_rgba(255,255,255,0.055),0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl transition duration-300 hover:border-mint/25 hover:bg-[#12191a];
   }
 
   .btn {
@@ -73,7 +73,7 @@
   }
 
   .status-badge {
-    @apply inline-flex rounded-full border border-mint/25 bg-[#091611]/90 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-mint backdrop-blur-lg;
+    @apply inline-flex rounded-full border border-mint/25 bg-[#091611]/[0.9] px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-mint backdrop-blur-lg;
   }
 
   .icon-button {
@@ -91,7 +91,7 @@
   .featured-card,
   .demo-card,
   .cta-card {
-    @apply relative rounded-xl border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025))] shadow-[inset_0_1px_0_rgba(255,255,255,.07),0_35px_100px_rgba(0,0,0,.35)] backdrop-blur-2xl;
+    @apply relative rounded-xl border border-white/10 bg-[#101416]/[0.9] shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_30px_90px_rgba(0,0,0,.32)] backdrop-blur-2xl;
   }
 
   .featured-card::before,
@@ -104,7 +104,7 @@
   }
 
   .case-card {
-    @apply overflow-hidden rounded-[8px] border border-white/10 bg-panel-gradient shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_18px_70px_rgba(0,0,0,.25)] backdrop-blur-xl transition duration-300 hover:border-mint/30 hover:bg-white/[0.07] hover:shadow-glow;
+    @apply overflow-hidden rounded-[8px] border border-white/10 bg-[#101416]/[0.9] shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_18px_60px_rgba(0,0,0,.22)] backdrop-blur-xl transition duration-300 hover:border-mint/30 hover:bg-[#11191a];
   }
 
   .case-card .mockup-shell {
@@ -131,20 +131,24 @@
     @apply inline-flex w-fit items-center gap-2 rounded-full border border-mint/25 bg-mint/10 px-3 py-2 text-xs font-semibold text-mint transition group-hover:border-mint/45 group-hover:bg-mint/15 group-hover:text-white;
   }
 
+  .case-open-primary {
+    @apply bg-mint text-ink hover:bg-[#a9ffd9] hover:text-ink;
+  }
+
   .service-link {
     @apply inline-flex min-h-10 items-center justify-center rounded-full border border-mint/25 bg-mint/[0.08] px-4 py-2 text-sm font-semibold text-mint transition hover:border-mint/45 hover:bg-mint/[0.14] hover:text-white;
   }
 
   .card-float {
-    @apply flex items-center gap-2 rounded-lg border border-white/[0.12] bg-[#0b0e14]/90 px-3 py-2 text-xs font-semibold text-white/75 shadow-glow backdrop-blur-xl;
+    @apply flex items-center gap-2 rounded-lg border border-white/[0.12] bg-[#0b0e14]/[0.9] px-3 py-2 text-xs font-semibold text-white/75 shadow-glow backdrop-blur-xl;
   }
 
   .solution-card {
-    @apply h-full min-h-[190px] rounded-lg border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025))] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,.05)] transition duration-300 hover:-translate-y-1.5 hover:border-mint/30 hover:shadow-glow;
+    @apply h-full min-h-[190px] rounded-lg border border-white/10 bg-[#101416]/[0.85] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,.05)] transition duration-300 hover:border-mint/30 hover:bg-[#12191a];
   }
 
   .task-card {
-    @apply relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-[radial-gradient(circle_at_90%_5%,rgba(155,124,255,.14),transparent_35%),linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025))] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,.05)] transition duration-300 hover:border-violet/30 hover:bg-white/[0.07];
+    @apply relative flex flex-col overflow-hidden rounded-xl border border-white/10 bg-[#101416]/[0.88] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,.05)] transition duration-300 hover:border-mint/25 hover:bg-[#12191a];
   }
 
   .task-number {
@@ -152,7 +156,7 @@
   }
 
   .process-card {
-    @apply relative z-10 flex min-h-[210px] flex-col overflow-hidden rounded-lg border border-white/10 bg-[#0c0f15]/95 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,.06)] transition duration-300 hover:border-mint/25 hover:bg-white/[0.055];
+    @apply relative z-10 flex min-h-[210px] flex-col overflow-hidden rounded-lg border border-white/10 bg-[#101416]/[0.95] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,.06)] transition duration-300 hover:border-mint/25 hover:bg-[#12191a];
   }
 
   .process-dot {
@@ -212,11 +216,11 @@
   }
 
   .prototype-shell {
-    @apply overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025))] shadow-[inset_0_1px_0_rgba(255,255,255,.07),0_30px_90px_rgba(0,0,0,.28)];
+    @apply overflow-hidden rounded-2xl border border-white/10 bg-[#101416]/[0.92] shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_30px_90px_rgba(0,0,0,.28)];
   }
 
   .prototype-panel {
-    @apply rounded-2xl border border-white/10 bg-[#101721]/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,.05)] backdrop-blur-xl;
+    @apply rounded-2xl border border-white/10 bg-[#0d1214]/[0.88] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,.05)] backdrop-blur-xl;
   }
 
   .prototype-nav {
@@ -262,14 +266,77 @@
   .prototype-service {
     background: radial-gradient(circle at 10% 0%, rgba(45, 212, 191, 0.16), transparent 34%), linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.025));
   }
+
+  .bg-product {
+    background:
+      radial-gradient(circle at 18% 0%, rgba(121, 242, 192, 0.08), transparent 26%),
+      linear-gradient(180deg, #080b0d 0%, #0b0f11 48%, #07090a 100%);
+  }
+
+  .product-section {
+    @apply mx-auto max-w-7xl px-5 py-8 sm:px-6 sm:py-12 lg:px-8;
+  }
+
+  .product-kicker {
+    @apply font-display text-xs font-semibold uppercase tracking-[0.18em] text-mint;
+  }
+
+  .product-device,
+  .product-panel,
+  .product-screen {
+    @apply rounded-xl border border-white/10 bg-[#101416]/[0.9] shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_26px_80px_rgba(0,0,0,.26)] backdrop-blur-xl;
+  }
+
+  .product-screen {
+    @apply min-h-[460px] p-4 sm:p-5;
+  }
+
+  .product-panel {
+    @apply p-5 sm:p-7;
+  }
+
+  .product-stat {
+    @apply rounded-lg border border-white/[0.08] bg-white/[0.035] px-4 py-3 text-sm font-semibold text-white/75;
+  }
+
+  .product-tab {
+    @apply flex w-full items-center gap-2 rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-3 text-left text-sm font-semibold text-white/60 transition hover:border-mint/30 hover:text-white;
+  }
+
+  .product-tab-active {
+    @apply border-mint/35 bg-mint/10 text-mint;
+  }
+
+  .product-row {
+    @apply flex items-center gap-3 rounded-xl border border-white/[0.08] bg-white/[0.032] p-3 transition hover:border-mint/25;
+  }
+
+  .product-row-active {
+    @apply border-mint/35 bg-mint/[0.075];
+  }
+
+  .product-step {
+    @apply min-h-[142px] rounded-xl border border-white/10 bg-[#101416]/[0.9] p-5 text-left transition hover:border-mint/25 hover:bg-[#12191a];
+  }
+
+  .product-step span {
+    @apply font-display text-4xl font-semibold text-white/[0.12];
+  }
+
+  .product-step b {
+    @apply mt-6 block text-base leading-7 text-white;
+  }
+
+  .product-final {
+    @apply grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center;
+  }
 }
 
 .aurora {
   background:
-    radial-gradient(circle at 16% 8%, rgba(121, 242, 192, 0.12), transparent 27%),
-    radial-gradient(circle at 85% 14%, rgba(155, 124, 255, 0.15), transparent 29%),
-    radial-gradient(circle at 55% 66%, rgba(121, 242, 192, 0.055), transparent 35%),
-    #050608;
+    radial-gradient(circle at 16% 8%, rgba(121, 242, 192, 0.075), transparent 25%),
+    radial-gradient(circle at 85% 14%, rgba(155, 124, 255, 0.08), transparent 27%),
+    #080b0d;
   animation: aurora-shift 18s ease-in-out infinite alternate;
 }
 
@@ -305,15 +372,15 @@
 }
 
 .section-tint-violet::after {
-  background: linear-gradient(180deg, rgba(31, 24, 58, 0.42), rgba(5, 6, 8, 0.18));
+  background: linear-gradient(180deg, rgba(24, 28, 31, 0.52), rgba(8, 11, 13, 0.2));
 }
 
 .section-tint-green::after {
-  background: linear-gradient(180deg, rgba(11, 45, 36, 0.34), rgba(5, 6, 8, 0.12));
+  background: linear-gradient(180deg, rgba(13, 35, 30, 0.28), rgba(8, 11, 13, 0.12));
 }
 
 .section-tint-blue::after {
-  background: linear-gradient(180deg, rgba(14, 34, 56, 0.36), rgba(5, 6, 8, 0.12));
+  background: linear-gradient(180deg, rgba(17, 29, 38, 0.34), rgba(8, 11, 13, 0.12));
 }
 
 .hero-panel { animation: hero-float 7s ease-in-out infinite; }

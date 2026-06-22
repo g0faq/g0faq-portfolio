@@ -23,8 +23,8 @@ export function WorkGallery() {
         <Reveal className="max-w-3xl">
           <SectionHeader
             eyebrow="Работы"
-            title="Демо-кейсы, которые можно открыть и потыкать"
-            text="Каждый кейс открывается как интерактивный прототип: формы, табы, статусы, сценарии и будущая логика в заглушках."
+            title="Кейсы, демки и страницы готовых продуктов"
+            text="Можно открыть интерактивную демку или перейти на отдельную страницу продукта, чтобы увидеть сценарий глазами клиента."
           />
         </Reveal>
         <Reveal>
@@ -46,11 +46,7 @@ export function WorkGallery() {
       <div ref={railRef} className="horizontal-rail">
         {works.map((work) => (
           <Reveal key={work.title} className="min-w-[78vw] snap-start sm:min-w-[380px] lg:min-w-[410px]">
-            <button
-              type="button"
-              onClick={() => setSelected(work)}
-              className="case-card group h-full w-full text-left"
-            >
+            <article className="case-card group h-full w-full text-left">
               <div className="relative overflow-hidden rounded-lg">
                 <WorkMockup variant={work.variant} />
                 <span className="status-badge absolute left-3 top-3">{work.status}</span>
@@ -61,9 +57,12 @@ export function WorkGallery() {
                 <div className="mt-3 flex flex-wrap gap-2">
                   {work.tags.map((tag) => <span key={tag} className="tag">{tag}</span>)}
                 </div>
-                <span className="case-open mt-auto">Открыть демо <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
+                <div className="mt-auto flex flex-wrap gap-2 pt-5">
+                  <a href={`#/product/${work.slug}`} className="case-open case-open-primary">Посмотреть продукт <ArrowRight className="h-4 w-4" /></a>
+                  <button type="button" onClick={() => setSelected(work)} className="case-open">Открыть демо</button>
+                </div>
               </div>
-            </button>
+            </article>
           </Reveal>
         ))}
       </div>
